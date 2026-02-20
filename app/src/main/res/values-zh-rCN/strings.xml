@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LunaTV</string>
+    <string name="tv_mode_detected">检测到电视模式</string>
+    <string name="tv_mode_welcome">欢迎使用 LunaTV 电视版</string>
+    <string name="settings">设置</string>
+    <string name="refresh">刷新</string>
+    <string name="fullscreen">全屏</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="clear_cookies">清除Cookies</string>
+    <string name="reset_url">重置地址</string>
+    <string name="cache_cleared">缓存已清除</string>
+    <string name="cookies_cleared">Cookies已清除</string>
+    <string name="url_reset">已重置为默认地址</string>
+    <string name="error_loading">加载错误: %s</string>
+    <string name="press_menu_again">按菜单键查看选项</string>
+</resources>

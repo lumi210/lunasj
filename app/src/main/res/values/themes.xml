@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.LunaTV" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:colorPrimary">#FF6B6B</item>
+        <item name="android:colorPrimaryDark">#1a1a1a</item>
+        <item name="android:colorAccent">#FF6B6B</item>
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="Theme.LunaTV.Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.LunaTV.TV" parent="Theme.Leanback.Browse">
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:colorPrimary">#FF6B6B</item>
+        <item name="android:colorAccent">#FF6B6B</item>
+    </style>
+
+</resources>
