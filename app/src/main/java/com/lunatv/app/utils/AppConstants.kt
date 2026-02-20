@@ -1,7 +1,7 @@
 package com.lunatv.app.utils
 
 object AppConstants {
-    const val DEFAULT_URL = "https://lunatv.smone.us"
+    const val DEFAULT_URL = "http://47.113.227.252:3000"
     
     const val PREF_NAME = "LunaTVPrefs"
     const val PREF_KEY_URL = "custom_url"
