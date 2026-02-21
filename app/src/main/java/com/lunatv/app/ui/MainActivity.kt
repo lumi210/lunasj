@@ -10,6 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import com.lunatv.app.R
 import com.lunatv.app.utils.AppConstants
 import com.lunatv.app.utils.DeviceType
+import com.lunatv.app.utils.DeviceUtils
 
 class MainActivity : BaseActivity() {
 
