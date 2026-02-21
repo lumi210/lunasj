@@ -38,16 +38,10 @@ object DeviceUtils {
     }
 
     fun isPhoneDevice(context: Context): Boolean {
-        val uiMode = context.resources.configuration.uiMode
-        @Suppress("DEPRECATION")
-        val isUiModePhone = (uiMode and Configuration.UI_MODE_TYPE_MASK) == Configuration.UI_MODE_TYPE_PHONE
-        
         val isMobile = context.packageManager.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)
-        
         val isSmallScreen = context.resources.configuration.screenLayout and 
                 Configuration.SCREENLAYOUT_SIZE_MASK < Configuration.SCREENLAYOUT_SIZE_LARGE
-        
-        return isUiModePhone || (isMobile && !isTvDevice(context))
+        return isMobile && !isTvDevice(context) && isSmallScreen
     }
 
     fun isTabletDevice(context: Context): Boolean {
