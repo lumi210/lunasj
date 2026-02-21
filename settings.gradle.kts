@@ -14,4 +14,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "LunaTV"
-include ':app'
+include(":app")
