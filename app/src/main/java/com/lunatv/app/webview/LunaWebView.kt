@@ -30,8 +30,8 @@ class LunaWebView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
-    private var webView: WebView
-    private var deviceType: DeviceType
+    private lateinit var webView: WebView
+    private var deviceType: DeviceType = DeviceType.PHONE
     private var isTvMode: Boolean = false
     private var focusedView: View? = null
 
@@ -41,18 +41,22 @@ class LunaWebView @JvmOverloads constructor(
     var onError: ((String) -> Unit)? = null
 
     init {
-        deviceType = DeviceUtils.getDeviceType(context)
-        isTvMode = deviceType == DeviceType.TV
-        
-        webView = WebView(context).apply {
-            layoutParams = LayoutParams(
-                LayoutParams.MATCH_PARENT,
-                LayoutParams.MATCH_PARENT
-            )
+        try {
+            deviceType = DeviceUtils.getDeviceType(context)
+            isTvMode = deviceType == DeviceType.TV
+            
+            webView = WebView(context).apply {
+                layoutParams = LayoutParams(
+                    LayoutParams.MATCH_PARENT,
+                    LayoutParams.MATCH_PARENT
+                )
+            }
+            addView(webView)
+            
+            setupWebView()
+        } catch (e: Exception) {
+            Log.e("LunaWebView", "Initialization failed", e)
         }
-        addView(webView)
-        
-        setupWebView()
     }
 
     @SuppressLint("SetJavaScriptEnabled")
