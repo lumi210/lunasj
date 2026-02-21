@@ -8,9 +8,9 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.KeyEvent
 import android.view.View
+import android.net.http.SslError
 import android.webkit.ConsoleMessage
 import android.webkit.CookieManager
-import android.webkit.SslError
 import android.webkit.SslErrorHandler
 import android.webkit.ValueCallback
 import android.webkit.WebChromeClient
